@@ -1,0 +1,22 @@
+﻿<Window x:Class="BookItDesktop.ShortcutSaveBookmark"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookItDesktop"
+        mc:Ignorable="d"
+        Title="ShortcutSaveBookmark" Height="216" Width="300">
+    <Grid Margin="0,0,0,160">
+        <TextBox x:Name="txtBoxSearch" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="292" ToolTip="Search..." TextChanged="txtBoxSearch_TextChanged"/>
+        <ListView x:Name="listViewDisplayBookmark" HorizontalAlignment="Left" Height="164" Margin="0,23,0,-162" VerticalAlignment="Top" Width="292" SelectionChanged="listViewDisplayBookmark_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="292"  TextBlock.TextAlignment="Center" Header="Url" DisplayMemberBinding="{Binding Path=displayUrl}"/>
+
+                    
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

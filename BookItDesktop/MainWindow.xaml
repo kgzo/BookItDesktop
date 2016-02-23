@@ -1,0 +1,23 @@
+﻿<Window x:Class="BookItDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookItDesktop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="281" Width="354" Loaded="Window_Loaded"
+        Background="#2D3233">
+    <Window.Resources>
+        <local:DataSet1 x:Key="dataSet1"/>
+        <CollectionViewSource x:Key="bookmarkTagsViewSource" Source="{Binding BookmarkTags, Source={StaticResource dataSet1}}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource bookmarkTagsViewSource}">
+        <TextBox x:Name="txtBoxUserName" Background="#202526" HorizontalAlignment="Center" Height="33" Margin="0,0,0,116" TextWrapping="Wrap" VerticalAlignment="Center" Width="220" RenderTransformOrigin="0.396,-1.174" Foreground="#D0D9DB"/>
+        <PasswordBox x:Name="txtBoxPassword" Background="#202526" HorizontalAlignment="Center" Height="33" Margin="0,0,0,46"  VerticalAlignment="Center" Width="220" Foreground="#D0D9DB"/>
+        <Label x:Name="labelRememberMe" HorizontalAlignment="Left" Height="23" Margin="90,15,0,0" Content="Remember Me:" VerticalAlignment="Center" Foreground="#D0D9DB"/>
+        <CheckBox x:Name="checkBoxRemember" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,200,0" Width="20" Height="20"/>
+        <Button x:Name="btnLogin" Content="Log in" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Center" Width="220" Click="btnLogin_Click" Height="33" Background="#737A7D"/>
+        <Label x:Name="labelRegister" Content="Register here" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="150,150,0,0" Foreground="#D0D9DB" MouseEnter="labelRegister_MouseEnter" MouseLeave="labelRegister_MouseLeave" MouseLeftButtonUp="labelRegister_MouseLeftButtonUp"/>
+    </Grid>
+    
+</Window>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="BookItDesktop.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookItDesktop"
+        mc:Ignorable="d"
+        Title="Register" Height="300" Width="300"
+         Background="#2D3233">
+    <Grid>
+        <TextBox x:Name="txtBoxEmail" Background="#202526" HorizontalAlignment="Center" Height="33" Margin="0,20,0,116" TextWrapping="Wrap" VerticalAlignment="Center" Width="220" RenderTransformOrigin="0.396,-1.174" Foreground="#D0D9DB"/>
+        <TextBox x:Name="txtBoxPassword" Background="#202526" HorizontalAlignment="Center" Height="33" Margin="0,40,0,46" TextWrapping="Wrap" VerticalAlignment="Center" Width="220" Foreground="#D0D9DB"/>
+        <TextBox x:Name="txtBoxConfirmPassword" Background="#202526" HorizontalAlignment="Center" Height="33" Margin="0,130,0,46" TextWrapping="Wrap" VerticalAlignment="Center" Width="220" Foreground="#D0D9DB"/>
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Center" Width="220" Click="btnLogin_Click" Height="33" Background="#737A7D"/>
+    </Grid>
+</Window>
